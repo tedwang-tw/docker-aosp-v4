@@ -24,8 +24,6 @@ RUN add-apt-repository ppa:webupd8team/java
 RUN apt-get update
 RUN apt-get install oracle-java6-installer -y
 RUN apt-get install oracle-java6-set-default -y
-ENV JAVA_HOME /usr/bin/java
-ENV PATH $JAVA_HOME:$PATH
 # GCC 
 RUN apt-get install -y bison g++-multilib gperf libxml2-utils
 RUN apt-get install -y gnupg flex build-essential \
@@ -68,3 +66,5 @@ ENV PATH ~/bin:$PATH
 RUN curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 RUN chmod a+x ~/bin/repo
 
+#ENV JAVA_HOME /usr/bin/java
+#ENV PATH $JAVA_HOME:$PATH
