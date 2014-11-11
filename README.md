@@ -3,6 +3,8 @@ docker-aosp-v4
 
 Docker image for building [Android Open Source Project (AOSP)](https://android.googlesource.com/ "Android Open Source Project (AOSP)") Kitkat (4.4.x) and older verions.
 
+Note: For newer versions, e.g. Lollipop, please check [tedwang-tw/docker-aosp-v5](https://github.com/tedwang-tw/docker-aosp-v5 "tedwang-tw/docker-aosp-v5").
+
 ## Installation ##
 Pull the image from the docker hub. This is the recommended method of installation as it is easier to update image.
 
