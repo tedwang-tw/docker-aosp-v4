@@ -27,12 +27,12 @@ RUN apt-get install oracle-java6-set-default -y
 ENV JAVA_HOME /usr/bin/java
 ENV PATH $JAVA_HOME:$PATH
 # GCC 
+RUN apt-get install -y bison g++-multilib gperf libxml2-utils
 RUN apt-get install -y gnupg flex build-essential \
 	zip libc6-dev libncurses5-dev:i386 x11proto-core-dev \
 	libx11-dev:i386 libreadline6-dev:i386 libgl1-mesa-glx:i386 \
 	libgl1-mesa-dev mingw32 tofrodos \
 	python-markdown xsltproc zlib1g-dev:i386
-RUN apt-get install -y bison g++-multilib gperf libxml2-utils
 RUN ln -s /usr/lib/i386-linux-gnu/mesa/libGL.so.1 /usr/lib/i386-linux-gnu/libGL.so
 
 # Clean up
