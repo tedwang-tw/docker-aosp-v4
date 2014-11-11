@@ -13,7 +13,7 @@ Alternately you can build the image locally.
 
     git clone https://github.com/tedwang-tw/docker-aosp-v4.git
     cd docker-aosp-v4
-    docker build --t tedwang/docker-aosp-v4 .
+    docker build -t tedwang/docker-aosp-v4 .
     
 ## Usage ##
 You can launch the image using the docker command line, suppose you have prepared a folder for aosp download in the local host, e.g. ~/AOSP/,
