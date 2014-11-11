@@ -13,8 +13,7 @@ RUN apt-get update \
 #
 # AOSP requirement depends on android versions
 #
-# Java
-# Add oracle-jdk6
+# Java 6
 RUN apt-get update
 RUN apt-get install python-software-properties -y
 RUN add-apt-repository ppa:webupd8team/java
