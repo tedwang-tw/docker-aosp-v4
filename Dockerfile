@@ -6,9 +6,9 @@ MAINTAINER tedwang.tw@gmail.com
 # fundamental packages
 #
 RUN apt-get update \
-	&& apt-get install -y curl vim git
+	&& apt-get install -y curl vim git man-db
 # optional
-#RUN apt-get install -y wget sudo net-tools 
+RUN apt-get install -y sudo net-tools 
 
 #
 # AOSP requirement depends on android versions
