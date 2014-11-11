@@ -14,6 +14,10 @@ RUN apt-get update \
 # AOSP requirement depends on android versions
 #
 # Java 6
+# Never ask for confirmations from Oracle
+ENV DEBIAN_FRONTEND noninteractive
+RUN echo "debconf shared/accepted-oracle-license-v1-1 select true" | /usr/bin/debconf-set-selections
+RUN echo "debconf shared/accepted-oracle-license-v1-1 seen true" | /usr/bin/debconf-set-selections
 RUN apt-get update
 RUN apt-get install python-software-properties -y
 RUN add-apt-repository ppa:webupd8team/java
