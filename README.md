@@ -29,6 +29,7 @@ The **/home/android/aosp** is the mounted point inside the container.
 
 After entering the container, you can operate as the normal developing:
 
+    0 android@ ~ $ cd aosp
     0 android@ ~/aosp $ git config --global user.email "name@example.com"
     0 android@ ~/aosp $ git config --global user.name "My Name"
     0 android@ ~/aosp $ repo init -u https://android.googlesource.com/platform/manifest
@@ -46,3 +47,4 @@ After entering the container, you can operate as the normal developing:
 ## Todo ##
 
 - Setup for ccache
+- Separate base image
