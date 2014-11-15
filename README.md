@@ -6,23 +6,26 @@ Docker image for building [Android Open Source Project (AOSP)](https://android.g
 Note: For newer versions, e.g. Lollipop, please check [tedwang-tw/docker-aosp-v5](https://github.com/tedwang-tw/docker-aosp-v5 "tedwang-tw/docker-aosp-v5").
 
 ## Installation ##
-Pull the image from the [Docker Hub](https://registry.hub.docker.com/u/tedwang/docker-aosp-v4/ "Docker Hub"). This is the recommended method of installation as it is easier to update image.
-
+Pull the image from the [Docker Hub](https://registry.hub.docker.com/u/tedwang/aosp-v4/ "Docker Hub"). This is the recommended method of installation as it is easier to update image.
 
     docker pull tedwang/docker-aosp-v4:latest
+
+Note: For original monolithic build, you should pull by another tag **aosp-v4:monolithic**.
 
 Alternately you can build the image locally.
 
     git clone https://github.com/tedwang-tw/docker-aosp-v4.git
     cd docker-aosp-v4
     docker build -t tedwang/docker-aosp-v4 .
-    
+
+Here you can swap the base image with either **tedwang/aosp-base12** or **-base14** by manually modifying "FROM" command in Dockerfile.
+
 ## Usage ##
 You can launch the image using the docker command line, suppose you have prepared a folder for aosp download in the local host, e.g. **~/AOSP**,
 
     docker run --name='aosp-v4' -it --rm \
     -v ~/AOSP:/home/android/aosp \
-    tedwang/docker-aosp-v4 \
+    tedwang/aosp-v4 \
     /bin/bash
 
 The **/home/android/aosp** is the mounted point inside the container.
@@ -47,4 +50,9 @@ After entering the container, you can operate as the normal developing:
 ## Todo ##
 
 - Setup for ccache
-- Separate base image
+- <s>Separate base image</s>
+
+## ChangeLog ##
+- 2014-11-15
+	- Created branch "[monolithic](https://github.com/tedwang-tw/docker-aosp-v4/tree/monolithic "monolithic")" for no separated base image build
+	- "[master](https://github.com/tedwang-tw/docker-aosp-v4/tree/master "master")" branch now includes the separated base image
