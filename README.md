@@ -10,7 +10,7 @@ Pull the image from the [Docker Hub](https://registry.hub.docker.com/u/tedwang/a
 
     docker pull tedwang/aosp-v4:latest
 
-Note: For original monolithic build, you should pull by another tag **aosp-v4:monolithic**.
+Note: If you'd like the original monolithic build, you can pull by another tag **aosp-v4:monolithic**.
 
 Alternately you can build the image locally.
 
