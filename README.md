@@ -8,7 +8,7 @@ Note: For newer versions, e.g. Lollipop, please check [tedwang-tw/docker-aosp-v5
 ## Installation ##
 Pull the image from the [Docker Hub](https://registry.hub.docker.com/u/tedwang/aosp-v4/ "Docker Hub"). This is the recommended method of installation as it is easier to update image.
 
-    docker pull tedwang/docker-aosp-v4:latest
+    docker pull tedwang/aosp-v4:latest
 
 Note: For original monolithic build, you should pull by another tag **aosp-v4:monolithic**.
 
@@ -16,7 +16,7 @@ Alternately you can build the image locally.
 
     git clone https://github.com/tedwang-tw/docker-aosp-v4.git
     cd docker-aosp-v4
-    docker build -t tedwang/docker-aosp-v4 .
+    docker build -t tedwang/aosp-v4 .
 
 Here you can swap the base image with either **tedwang/aosp-base12** or **-base14** by manually modifying "FROM" command in Dockerfile.
 
