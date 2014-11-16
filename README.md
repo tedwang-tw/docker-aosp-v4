@@ -10,8 +10,6 @@ Pull the image from the [Docker Hub](https://registry.hub.docker.com/u/tedwang/a
 
     docker pull tedwang/aosp-v4:latest
 
-Note: If you'd like the original monolithic build, you can pull by another tag **aosp-v4:monolithic**.
-
 Alternately you can build the image locally.
 
     git clone https://github.com/tedwang-tw/docker-aosp-v4.git
@@ -19,6 +17,12 @@ Alternately you can build the image locally.
     docker build -t tedwang/aosp-v4 .
 
 Here you can swap the base image with either **tedwang/aosp-base12** or **-base14** by manually modifying "FROM" command in Dockerfile.
+
+Note: If you'd like the original monolithic build, you can clone by the branch "monolithic":
+
+    git clone https://github.com/tedwang-tw/docker-aosp-v4.git -b monolithic
+    cd docker-aosp-v4
+    docker build -t tedwang/aosp-v4:monolithic .
 
 ## Usage ##
 You can launch the image using the docker command line, suppose you have prepared a folder for aosp download in the local host, e.g. **~/AOSP**,

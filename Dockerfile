@@ -1,3 +1,6 @@
+#
+# We can use either base12 or base14
+#
 FROM tedwang/aosp-base12:latest
 
 MAINTAINER tedwang.tw@gmail.com
